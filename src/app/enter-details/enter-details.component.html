@@ -1,0 +1,33 @@
+<!-- <p>
+  enter-details works!
+</p> -->
+
+<body>
+
+  <h1> Welcome to Angular-Practice!</h1>
+  <h2>Hero List</h2>
+  <ul class="person"  *ngFor="let PERSON of person">
+
+    <li> 
+
+      <div style= "width: 60px; float: left;" >{{PERSON.id}}</div>
+      <div style= "width: 600px; float:left"> {{PERSON.name}} </div>
+      <div style= "width: 90px; float:left"> {{PERSON.height}}</div>
+      <div style= "margin-left: 620px;">{{PERSON.age}}</div>
+    </li>
+  </ul>
+  
+
+  
+</body>
+
+<nav>
+  <button routerLink="/display-details">NEXT</button>
+  
+  
+</nav>
+
+
+
+
+ 

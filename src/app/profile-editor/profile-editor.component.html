@@ -1,0 +1,183 @@
+<!-- <h1>Profile Form</h1>
+<form [formGroup]="profileForm">
+
+  <h2>Personal Details</h2>
+    
+    <style> 
+        input {
+          width: 100%;
+        }
+        </style>
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName"  placeholder=" enter your first name">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" placeholder=" enter your last name">
+  </label>
+  
+  
+  <div formGroupName="address">
+      <h3>Address</h3>
+      <label>
+        Street:
+        <input type="text" formControlName="street" placeholder=" enter your street address">
+      </label>
+    
+      <label>
+        City:
+        <input type="text" formControlName="city" placeholder=" enter your city"><br>
+      </label>
+      <br><br>
+      
+      <label>
+        Province:
+        <input type="text" formControlName="Province" placeholder=" enter your province">
+      </label>
+    
+      <label>
+        Zip Code:
+        <input type="text" formControlName="zip" placeholder=" enter your zip code">
+      </label>
+    </div>
+
+  </form>
+  
+   <p>
+      <button (click)="updateProfile()">Update Profile</button>
+    </p>
+    <button type="submit"  [disabled]="!profileForm.valid">Submit</button> -->
+    <!-- <p> -->
+        <!-- <button (click)="updateProfile()">Update Profile</button>
+        <br>
+        <button type="submit" (click)="onSubmit()" [disabled]="!profileForm.valid">Submit</button>
+      </p>
+      <div class="alert" *ngIf="updated">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Great!</strong> The form has been saved.
+      </div>
+    
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+ 
+
+  <p>
+    Form Status: {{ profileForm.status }}
+  </p> 
+  
+<div formArrayName="aliases">
+  <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+
+  <div *ngFor="let address of aliases.controls; let i=index">
+    
+    <label>
+      Alias:
+      <input type="text" [formControlName]="i">
+    </label>
+
+  </div>
+</div>
+</form> -->
+
+
+
+
+<!-- <div style="float: right;">
+    <button routerLink="/display-months">Next component</button>
+  </div>
+  <div style="float: left;">
+    <button routerLink="/name-editor">previous component</button>
+  </div>
+  <br>
+    -->
+    <h1>
+        Profile Form
+      </h1>
+      <form [formGroup]="profileForm">
+        <div class="container">
+          <h3>Personal Details</h3>
+          <div class="column">
+            <div class="form-group">
+              <label for="">First Name: </label>
+              <input type="text" formControlName="firstName" placeholder="Enter your firstname">
+            </div>
+          </div>
+          <div class="column">
+            <div class="form-group">
+              <label for="">Last Name: </label>
+              <input type="text" formControlName="lastName" placeholder="Enter your lastname">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div formGroupName="address">
+          <div class="container">
+            <h3>Address</h3>
+            <div class="column">
+              <div class="form-group">
+                <label for="">Street: </label>
+                <input type="text" formControlName="street" placeholder="Enter your street address">
+              </div>
+            </div>
+            <div class="column">
+              <div class="form-group">
+                <label for="">City: </label>
+                <input type="text" formControlName="city" placeholder="Enter your city">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="column">
+              <div class="form-group">
+                <label for="">Province: </label>
+                <input type="text" formControlName="Province" placeholder="Enter your province">
+              </div>
+            </div>
+            <div class="column">
+              <div class="form-group">
+                <label for="">Zip Code: </label>
+                <input type="text" formControlName="zip" placeholder="Enter your zip code">
+              </div>
+            </div>
+            <p>
+              <button (click)="updateProfile()">Update Profile</button>
+              <br>
+              <button type="submit" (click)="onSubmit()" [disabled]="!profileForm.valid">Submit</button>
+            </p>
+            <div class="alert" *ngIf="updated">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <strong>Great!</strong> The form has been saved.
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="container">
+        <form [formGroup]="profileForm">
+          <!-- <input type="text" formControlName="firstName" required> -->
+          <p>
+            Form Status: {{ profileForm.status }}
+          </p>
+          <div formArrayName="aliases">
+            <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+            <div *ngFor="let address of aliases.controls; let i=index">
+              <!-- The repeated alias template -->
+              <label>
+                Alias:
+                <input type="text" [formControlName]="i" placeholder="Enter phone number">
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div style="float: right;">
+        <button routerLink="/display-months">Next component</button>
+      </div>
+      <div style="float: left;">
+        <button routerLink="/name-editor">previous component</button>
+      </div>
+      <br>
+      

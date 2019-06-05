@@ -1,0 +1,62 @@
+<body>
+  <!-- display-details works!<br> -->
+
+
+  <!-- <style>
+    
+      table, th, td {
+        border: 1px solid yellow;
+        border-collapse: collapse;
+        color: red;
+  background-color:white;
+      }
+      th, td {
+  padding: 15px;
+}
+th {
+  text-align: left;
+}
+
+      </style> -->
+<table  align="center">
+    <caption>PERSONAL DETAILS</caption>
+
+  <thead>
+      
+    <tr>
+      
+      <th>NAME</th>
+      <th>SURNAME</th>
+      <th>AGE</th>
+      <th>HOBBY</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of per">
+      <td>{{ person.name }}</td>
+      <td>{{ person.surname }}</td>
+      <td>{{ person.age }}</td>
+      <td>{{ person.hobby }}</td>
+      <!-- <label for="button">Display Details:</label> -->
+
+      <!-- <input routerLink="/show" type="button" id=person placeholder="button"> -->
+      
+
+
+    </tr>
+  </tbody>
+</table>
+</body>
+
+
+<!-- <button  routerLink= "/name-editor">NEXT</button><br> -->
+
+<div style="float: right;">
+    <button routerLink="/name-editor">Next component</button>
+  </div>
+  <div style="float: left;">
+    <button routerLink="">previous component</button>
+  </div>
+  <br>
+  

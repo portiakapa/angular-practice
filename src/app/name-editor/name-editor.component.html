@@ -1,0 +1,28 @@
+<!-- <p>
+  name-editor works!
+</p> -->
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+
+<p>
+  Value: {{ name.value }}
+</p>
+
+<p>
+  <button (click)="updateName()">Display Name</button>
+</p>
+
+<!-- <button  routerLink= "/profile-editor">NEXT</button> -->
+
+
+
+<div style="float: right;">
+    <button routerLink="/profile-editor">Next component</button>
+  </div>
+  <div style="float: left;">
+    <button routerLink="/display-details">previous component</button>
+  </div>
+  <br>
+  
